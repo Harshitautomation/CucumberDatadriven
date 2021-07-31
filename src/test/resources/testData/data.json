@@ -1,0 +1,12 @@
+{
+  "customerSearch":
+  {
+    "firstname": "Harshit",
+    "lastname": "Shah"
+  },
+  "gender":
+  {
+    "select": "male",
+    "experience": "1"
+  }
+}
