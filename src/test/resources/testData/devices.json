@@ -1,0 +1,25 @@
+[
+  {
+    "name": "GalaxyS20",
+    "caps":
+    {
+     "device": "Samsung Galaxy S20",
+      "os_version": "10.0",
+      "browser": "chrome",
+      "browser_version": "latest",
+      "os": "Android",
+      "real_mobile": true
+    }
+  },
+  {
+    "name": "WindowsChrome",
+    "caps":
+    {
+      "os_version": "10",
+      "browser": "chrome",
+      "browser_version": "latest",
+      "os": "Windows"
+    }
+  }
+
+]

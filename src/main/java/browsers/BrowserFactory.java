@@ -22,7 +22,7 @@ public class BrowserFactory
         try{
             {
                 selectedDriver= (RemoteWebDriver) configureLocalBrowser();
-                selectedDriver.manage().window().maximize();;
+                selectedDriver.manage().window().maximize();
             }
         }
         catch (Exception e)
@@ -40,7 +40,7 @@ public class BrowserFactory
 
         if(desiredbrowser.equalsIgnoreCase("chrome"))
         {
-            System.setProperty("webdriver.chrome.driver","D:\\Harshit\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver","F:\\chromedriver\\chromedriver.exe");
             t1driver.set(new ChromeDriver());
         }
         return getDriver();

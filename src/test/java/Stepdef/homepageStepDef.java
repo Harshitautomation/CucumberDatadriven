@@ -23,7 +23,7 @@ public class homepageStepDef extends BaseStep
 
         String finaljsonDataString = new JsonDataManager().GetSceanrioDatainJsonFormat(dtable,"data.json");
         sceanrioContext.csdata= new JsonDataManager().GetApplicationDataObject(finaljsonDataString);
-        System.out.println(sceanrioContext.csdata);
+        System.out.println(sceanrioContext.csdata.customerSearch.getFirstname());
         basePage.intialize();
 
 
