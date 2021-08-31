@@ -1,5 +1,7 @@
 package browsers;
 
+import io.cucumber.java.AfterStep;
+import io.cucumber.java.Scenario;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -49,6 +51,12 @@ public class BrowserFactory
     public static synchronized RemoteWebDriver getDriver()
     {
         return t1driver.get();
+    }
+
+    @AfterStep
+    public void stepafter(Scenario sc)
+    {
+        sc.log("Aftr every Step");
     }
 
 }
