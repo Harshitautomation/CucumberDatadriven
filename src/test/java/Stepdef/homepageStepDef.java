@@ -1,5 +1,6 @@
 package Stepdef;
 
+import browsers.BrowserFactory;
 import io.cucumber.java.en.Given;
 import utility.JsonDataManager;
 import utility.SceanrioContext;
@@ -25,6 +26,7 @@ public class homepageStepDef extends BaseStep
         sceanrioContext.csdata= new JsonDataManager().GetApplicationDataObject(finaljsonDataString);
         System.out.println(sceanrioContext.csdata.customerSearch.getFirstname());
         basePage.intialize();
+        BrowserFactory.getLogger("https://www.techlistic.com/p/selenium-practice-form.html");
 
 
     }

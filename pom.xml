@@ -139,14 +139,14 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-failsafe-plugin</artifactId>
                     <version>3.0.0-M4</version>
-<!--                    <dependencies>-->
-<!--                      &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.maven.surefire/surefire-junit47 &ndash;&gt;-->
-<!--                      <dependency>-->
-<!--                        <groupId>org.apache.maven.surefire</groupId>-->
-<!--                        <artifactId>surefire-junit47</artifactId>-->
-<!--                        <version>3.0.0-M4</version>-->
-<!--                      </dependency>-->
-<!--                    </dependencies>-->
+                    <dependencies>
+                      <!-- https://mvnrepository.com/artifact/org.apache.maven.surefire/surefire-junit47 -->
+                      <dependency>
+                        <groupId>org.apache.maven.surefire</groupId>
+                        <artifactId>surefire-junit47</artifactId>
+                        <version>3.0.0-M4</version>
+                      </dependency>
+                    </dependencies>
                     <executions>
                       <execution>
                         <id>integration-test</id>
