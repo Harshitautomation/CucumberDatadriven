@@ -2,6 +2,7 @@ package browsers;
 
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Scenario;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -19,7 +20,7 @@ import java.util.logging.Level;
 public class BrowserFactory
 {
 
-    public RemoteWebDriver selectedDriver;
+    public WebDriver selectedDriver;
     private String desiredbrowser;
     private String runwhere="local";
 
@@ -31,7 +32,7 @@ public class BrowserFactory
         if(runwhere.equalsIgnoreCase("local"))
         try{
             {
-                selectedDriver= (RemoteWebDriver) configureLocalBrowser();
+                selectedDriver=  configureLocalBrowser();
                 selectedDriver.manage().window().maximize();
             }
         }
@@ -50,13 +51,14 @@ public class BrowserFactory
 
         if(desiredbrowser.equalsIgnoreCase("chrome"))
         {
-            System.setProperty("webdriver.chrome.driver","F:\\chromedriver\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\chromedriver.exe");
             ChromeOptions chromeOptions = new ChromeOptions();
             LoggingPreferences logPrefs = new LoggingPreferences();
             logPrefs.enable(LogType.PERFORMANCE, Level.SEVERE);
             logPrefs.enable(LogType.BROWSER, Level.SEVERE);
             logPrefs.enable(LogType.DRIVER, Level.SEVERE);
             chromeOptions.setCapability( "goog:loggingPrefs", logPrefs );
+            chromeOptions.addArguments("--headless");
             t1driver.set(new ChromeDriver(chromeOptions));
         }
         return getDriver();
