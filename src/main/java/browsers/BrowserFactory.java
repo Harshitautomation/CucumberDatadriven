@@ -51,14 +51,14 @@ public class BrowserFactory
 
         if(desiredbrowser.equalsIgnoreCase("chrome"))
         {
-            System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\chromedriver");
             ChromeOptions chromeOptions = new ChromeOptions();
             LoggingPreferences logPrefs = new LoggingPreferences();
             logPrefs.enable(LogType.PERFORMANCE, Level.SEVERE);
             logPrefs.enable(LogType.BROWSER, Level.SEVERE);
             logPrefs.enable(LogType.DRIVER, Level.SEVERE);
             chromeOptions.setCapability( "goog:loggingPrefs", logPrefs );
-            chromeOptions.addArguments("--headless");
+          //  chromeOptions.addArguments("--headless");
             t1driver.set(new ChromeDriver(chromeOptions));
         }
         return getDriver();
