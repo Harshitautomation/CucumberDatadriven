@@ -1,0 +1,12 @@
+[33mcd501a3[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m Changed dependency
+[33m8808c31[m changed to webdriverManager
+[33m6daccce[m added linux chromedriver
+[33m9706d33[m headless mode
+[33m428f526[m Create maven.yml
+[33mbc8a6e2[m Create README.md
+[33mb6d70d1[m adding index.html file
+[33me992d73[m Adding Log
+[33m2e4a526[m Added PDF Reporting with extent using grasshopper dependency
+[33mce9689e[m dependency updated
+[33m1bed078[m New Method  and ultilty Added up
+[33m8c325d8[m Intial Commit for cucumber Data Project
