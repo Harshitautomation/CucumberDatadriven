@@ -24,3 +24,27 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn clean verify -P cuke
+#     - uses: deblockt/cucumber-report-annotations-action@v1.7
+#       with:
+#         access-token: ${{ secrets.GITHUB_TOKEN }}
+#         path: "**/cucumber.json"
+#     - name: HTML Preview
+#       uses: pavi2410/html-preview-action@v2
+#       with:
+#        html_file: # default is index.html
+#     - name: Deploy report page to GitHub Page
+#       uses: peaceiris/actions-gh-pages@v3
+#       with:
+#         github_token: ${{ secrets.GITHUB_TOKEN }}
+#         publish_dir: ./test-output/spark
+    - name: Deploy to GitHub Pages
+      if: success()
+      uses: crazy-max/ghaction-github-pages@v2
+      with:
+        target_branch: gh-pages
+        build_dir: ./test-output/Spark
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
+
