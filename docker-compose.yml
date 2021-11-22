@@ -1,0 +1,22 @@
+version: "3"
+services:
+     hub:
+       image: selenium/hub:latest
+       ports:
+         - "4444:4444"
+     chrome:
+      image: selenium/node-chrome-debug:latest
+      depends_on:
+        - hub
+      environment:
+        - HUB_HOST=hub
+      ports:
+        - "9090:5900"
+     test:
+       image: testautomation:latest
+       depends_on:
+         - chrome
+       environment:
+         - HUB_HOST=hub
+       volumes:
+         - ./test-output/spark:/app/target
